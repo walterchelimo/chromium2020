@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+  <link rel="stylesheet" href="css/indexstyle.css">
+</head>
+<body>
+  <nav>
+    <ul class="ulstyle">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#Gallery">Gallery</a></li>
+      <li><a href="blog.html">My Block</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+
+    </ul>
+  </nav>
+  <sectio>
+    <div class="homepage">
+      <div class="hrt">
+        <h1>we, help</h1>
+        <h2>we also rescue</h2>
+        <button>Call Us!</button>
+      </div>
+    </div>
+  </sectio>
+
+<section id="about">
+  <h1 class="center">About Me</h1>
+  <div class="flexbox">
+  <div>
+    <h3 class="center">Our Values</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ab architecto cumque dignissimos dolor dolores
+      dolorum itaque nobis rem. Accusamus assumenda,
+      blanditiis dolores excepturi exercitationem inventore laudantium molestiae obcaecati odio perspiciatis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis, dolores ducimus ea eveniet explicabo facere ipsam
+      ipsum maiores maxime minus mollitia nesciunt quasi reiciendis reprehenderit soluta tenetur unde voluptates!
+    </p>
+
+  </div>
+
+  <div >
+    <h3 class="center">Our Mission</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ab architecto cumque dignissimos dolor dolores
+      dolorum itaque nobis rem. Accusamus assumenda,
+      blanditiis dolores excepturi exercitationem inventore laudantium molestiae obcaecati odio perspiciatis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci culpa cupiditate debitis deleniti eaque eius eveniet ex excepturi harum
+      in ipsa laboriosam praesentium provident quaerat qui sunt, tenetur, veritatis voluptatum?
+    </p>
+
+  </div>
+
+  <div >
+    <h3 class="center">Our Goal</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ab architecto cumque dignissimos dolor dolores
+      dolorum itaque nobis rem. Accusamus assumenda,
+      blanditiis dolores excepturi exercitationem inventore laudantium molestiae obcaecati odio perspiciatis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eos, esse incidunt magnam molestiae omnis pariatur quaerat quas repellat,
+      sapiente tempora tenetur totam veniam voluptatibus? Eaque ipsa ullam voluptatibus.
+    </p>
+  </div>
+  </div>
+</section>
+<section id="Gallery">
+  <h1 class="center">Our Gallery</h1>
+  <div class="flexS">
+
+    <div>
+      <img src="images/a.jpeg" width="300" height="300">
+      <p>image1</p>
+    </div>
+    <div>
+      <img src="images/b.jpeg" width="300" height="300">
+      <p>image2</p>
+    </div>
+    <div>
+      <img src="images/c.jpeg" width="300" height="300">
+      <p>image3</p>
+    </div>
+
+  </div>
+
+
+  <div class="flexS">
+
+    <div>
+      <img src="images/d.jpeg" width="300" height="300">
+      <p>image4</p>
+    </div>
+    <div>
+      <img src="images/e.png" width="300" height="300">
+      <p>image5</p>
+    </div>
+    <div>
+      <img src="images/f.jpeg" width="300" height="300">
+      <p>image6</p>
+    </div>
+
+  </div>
+
+</section>
+
+ <section id="contacts">
+  <div class="cont">
+
+  <form>
+    <h1 class="center">GET IN TOUCH!</h1>
+    <div class="row">
+
+      <div class="cols-20">
+        <label>First name:</label>
+      </div>
+      <div class="cols-80">
+        <input type="text" name="name" placeholder="john">
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="cols-20">
+        <label>Second Name:</label>
+      </div>
+      <div class="cols-80">
+        <input type="text" name="name" placeholder="doe">
+      </div>
+  </div>
+
+    <div class="row">
+      <div class="cols-20">
+        <label>Email:</label>
+      </div>
+      <div class="cols-80">
+        <input type="email" name="name" placeholder="john@gmail.com">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="cols-20">
+        <label>Subject:</label>
+      </div>
+      <div class="cols-80">
+        <textarea name="subject" cols="20" rows="5" placeholder="write something...."></textarea>
+      </div>
+
+
+      <div>
+        <input class="btnsubmit" type="submit" value="SUBMIT">
+      </div>
+    </div>
+
+
+  </form>
+  </div>
+ </section>
+
+
+  <h3 id="DarkModetext">Dark Mode is OFF</h3>
+  <button onclick="darkMode()">Darkmode</button>
+  <button onclick="lightMode()">LightMode</button>
+  <script>
+    function darkMode() {
+      var element = document.body;
+      var content = document.getElementById("DarkModetext");
+      element.className = "dark-mode";
+      content.innerText = "Dark Mode is ON";
+    }
+    function lightMode() {
+      var element = document.body;
+      var content = document.getElementById("DarkModetext");
+      element.className = "light-mode";
+      content.innerText = "Dark Mode is OFF";
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+$(function()
+{var info=$('.upload-info');function progress(value)
+{$('.progress',info).val(value);var p=value+'%';$('.progress-bar',info).width(p).text(p);}
+function upload(files)
+{if(files.length!==1)
+{console.log('BAD FILES.LENGTH',files.length);}
+FileAPI.upload({url:FileAPI.storeUrl,data:{userId:FileAPI.currentUserId,redirect:FileAPI.afterUploadRedirect,isFlashUploader:'yes'},files:{file:files},prepare:function(evt)
+{info.show();progress(0);},progress:function(evt)
+{progress(Math.floor(evt.loaded/evt.total*100));},complete:function(err,xhr)
+{setTimeout(function()
+{info.hide();},10000);try
+{document.location.href=xhr.responseText.substring(10);}
+catch(e){}}});}
+$('.upload > input').on('change',function(e)
+{upload(FileAPI.getFiles(e));});$('.upload-info .close').on('click',function(e)
+{info.hide();});$('.landing').dnd(function(over)
+{$('.container',this).toggleClass('upload-area',over);},function(files)
+{upload(files);});});$('.list-group-item-action:not([data-toggle="list"])').on('click',function(e)
+{e.stopPropagation();});$('[data-toggle="tooltip"]').tooltip();$('#feedback form').on('submit',function(e)
+{e.preventDefault();$('#feedback-url').val(location.href);$('#feedback-btn').attr('disabled',true);$('#feedback-msg').text('Thanks for feedback!');$.post({url:'/ajax/feedback',data:$(this).serialize()});$(this).hide();return false;});$('.carousel-nav').on('slide.bs.carousel',function(e)
+{var slides=$(this).data('item')||6;var offset=$('.carousel-item',this).length-slides;var index=$(e.relatedTarget).index();if(index>=offset)
+{for(var i=0;i<index-offset;i++)
+{$('.carousel-inner',this).append($('.carousel-item',this).eq(e.direction==='left'?i:0));}}});

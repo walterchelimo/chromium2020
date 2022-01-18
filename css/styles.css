@@ -1,0 +1,33 @@
+form {
+    border: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:aliceblue;
+    padding:12px;
+}
+.inputstyle{
+    width:50%;
+    padding:8px;
+    margin-left: 15px;
+
+
+}
+label{
+    display:inline-block;
+    padding:12px 12px;
+
+}
+#thebutton{
+    background-color: brown;
+    padding:12px;
+    text-align: center;
+    color:white;
+    width:20%;
+    margin-top:20px;
+    border-radius: 10px;
+
+}
+body h1{
+    text-align: center;
+}

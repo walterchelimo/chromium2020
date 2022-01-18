@@ -1,0 +1,10 @@
+$.event.special.touchstart={setup:function(_,ns,handle)
+{this.addEventListener("touchstart",handle,{passive:!ns.includes("noPreventDefault")});}};$.fn.template=function(data)
+{try
+{return _.template(this.html())(data);}
+catch(e){}};$.fn.toggleAttr=function(value)
+{return this.each(function()
+{var self=$(this);if(self.is('['+value+']'))
+{self.removeAttr(value)}
+else
+{self.attr(value,1)}});};

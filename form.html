@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<form action="#">
+    <h1>FIELD THIS FORM</h1>
+    <div >
+    <label>Full Name</label><br>
+    <input class="inputstyle" type="text" name="firstname" placeholder="input your first name">
+    </div>
+    <div>
+        <label>Second Name</label><br>
+        <input class="inputstyle" type="text" name="secname" placeholder="input your middle name">
+    </div>
+    <div>
+        <label>email</label><br>
+        <input class="inputstyle" type="email" name="email" placeholder="Enter your valid email">
+    </div>
+    <div>
+        <label>phone number</label><br>
+        <input class="inputstyle" type="tel" name="pnumber" placeholder="enter your phone number">
+    </div>
+    <div>
+        <label>Date of birth</label><br>
+        <input class="inputstyle" type="date" name="dob" >
+    </div>
+    <div>
+        <label>GitHub link:</label><br>
+        <input class="inputstyle" type="url" name="github" placeholder="enter your github url ">
+    </div>
+    <div>
+        <label>LOCATION:</label><br>
+        <select class="inputstyle" name="location">
+            <option value="nakuru">nakuru</option>
+            <option value="nairobi">nairobi</option>
+            <option value="eldoret">eldoret</option>
+            <option value="kakamega">kakamega</option>
+            <option value="kisumu">kisumu</option>
+        </select>
+
+    </div>
+    <div>
+        <label>Gender:
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+    </div>
+    <div>
+    <label>stack:</label><br>
+    <input type="checkbox" name="stack" value="frontend">
+    <label>frontend</label>
+    <input type="checkbox" name="stack" value="backend">
+    <label>backend</label>
+    <input type="checkbox" name="stack" value="fullstack">
+    <label>fullstack</label><br>
+    </div>
+    <div>
+        <label>Comments:</label><br>
+        <textarea name="ta" cols="30" rows="10">
+        </textarea>
+    </div>
+    <div>
+        <input id="thebutton" type="submit" name="submit" value="submit">
+    </div>
+
+
+</form>
+</body>
+</html>
